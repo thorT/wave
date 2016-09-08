@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43BDAA001D8114F80063456E /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BDA9FF1D8114F80063456E /* NextViewController.m */; };
 		43FE03101D7FED330049F669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FE030F1D7FED330049F669 /* main.m */; };
 		43FE03131D7FED330049F669 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FE03121D7FED330049F669 /* AppDelegate.m */; };
 		43FE03161D7FED330049F669 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FE03151D7FED330049F669 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43BDA9FE1D8114F80063456E /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		43BDA9FF1D8114F80063456E /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		43FE030B1D7FED330049F669 /* wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FE030F1D7FED330049F669 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43FE03111D7FED330049F669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +69,8 @@
 				43FE03121D7FED330049F669 /* AppDelegate.m */,
 				43FE03141D7FED330049F669 /* ViewController.h */,
 				43FE03151D7FED330049F669 /* ViewController.m */,
+				43BDA9FE1D8114F80063456E /* NextViewController.h */,
+				43BDA9FF1D8114F80063456E /* NextViewController.m */,
 				43FE03171D7FED330049F669 /* Main.storyboard */,
 				43FE031A1D7FED330049F669 /* Assets.xcassets */,
 				43FE031C1D7FED330049F669 /* LaunchScreen.storyboard */,
@@ -123,6 +128,7 @@
 				TargetAttributes = {
 					43FE030A1D7FED330049F669 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M7LE9XCJVX;
 					};
 				};
 			};
@@ -162,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BDAA001D8114F80063456E /* NextViewController.m in Sources */,
 				43FE03161D7FED330049F669 /* ViewController.m in Sources */,
 				43FE03131D7FED330049F669 /* AppDelegate.m in Sources */,
 				43FE03281D7FED690049F669 /* THWave.m in Sources */,
@@ -277,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thor.www.wave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laizhuan.a0110;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -288,10 +298,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thor.www.wave;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laizhuan.a0110;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -314,6 +327,7 @@
 				43FE03241D7FED330049F669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

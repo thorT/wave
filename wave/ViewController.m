@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "THWave.h"
+#import "NextViewController.h"
+
+
 
 @interface ViewController ()
+
+
 
 @end
 
@@ -17,22 +21,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    self.view.backgroundColor = [UIColor redColor];
-    
-    THWave *wave = [[THWave alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
-    wave.waveHeight = 8;
-    wave.waveSpeed = 10;
-    wave.waveWidth = 300;
-    wave.waveColor = [UIColor redColor];
-    [self.view addSubview:wave];
-    
-    [wave startWaveAnimation];
     
 }
 
 
+- (IBAction)sail:(UIButton *)sender {
+    NextViewController *next = [[NextViewController alloc] init];
+    [self presentViewController:next animated:YES completion:nil];
+    
+}
 
 
 

@@ -44,11 +44,12 @@
 
 #pragma mark - initUI
 - (void)initUI{
+    // 设置底色
+    self.backgroundColor = [UIColor whiteColor];
+    
     // 创建layer
     _waveLayer = [CAShapeLayer layer];
     [self.layer addSublayer:_waveLayer];
-    // 设置底色
-    self.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - 设置浪高
@@ -79,7 +80,7 @@
 // 动画实现
 - (void)wave{
     
-    // 随机
+    // 1. 随机
     int speed = [@(self.waveSpeed) intValue];
     int num = arc4random() % speed;
     self.offset += num;
@@ -87,13 +88,22 @@
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.waveHeight;
     CGFloat y = 0.f;
-    // 绘线
+    // 2. 绘线
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(0, height)];
     for (CGFloat x = 0.f; x <= width; x++) {
-        y = height * sinf(2*M_PI/self.waveWidth *x + self.offset * 0.045);
+        y = height * sinf(2*M_PI/self.waveWidth *x - self.offset * 0.0045);
         [path addLineToPoint:CGPointMake(x, y)];
     }
+    
+    // 3. 返回x等于中心点时的Y值
+    CGFloat centerX = self.bounds.size.width / 2.0;
+    CGFloat centerY = height * sinf(2*M_PI/self.waveWidth * centerX - self.offset * 0.0045);
+    if (self.waveY) {
+        self.waveY(centerY);
+    }
+    
+    // 4. 闭合曲线
     [path addLineToPoint:CGPointMake(width, height)];
     [path addLineToPoint:CGPointMake(0, height)];
     [path closePath];

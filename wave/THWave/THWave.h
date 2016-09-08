@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
+typedef void (^WaveYBlock)(CGFloat waveY);
 
 
 @interface THWave : UIView
@@ -24,6 +25,9 @@
 
 /** 浪速： 浪的内填充颜色 */
 @property (nonatomic, strong) UIColor *waveColor;
+
+/** 返回浪的Y点 */
+@property (nonatomic, copy) WaveYBlock waveY;
 
 
 /** 开始波动 */
