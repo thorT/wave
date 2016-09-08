@@ -2,11 +2,11 @@
 
 示例：
 
-
+![](https://github.com/thorT/wave/blob/master/screenshot/Untitled.gif)
 
 ---
 ### 思路： 使用**贝塞尔曲线**绘制正弦曲线；使用**CAShapeLayer**绘制形状；使用CADisplayLink做刷屏；下面直接上代码；
----
+
 ###### 一. 创建THWave类，继承于UIView
 <pre>
 //外放这些属性和方法
